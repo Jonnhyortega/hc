@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+:root {
+  --inter: "Inter", sans-serif;
+  --title: "Funnel Display", "sans-serif";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--inter);
+
+  a {
+    text-decoration: none;
+  }
+}
+body {
+  background-color: black;
+}
+
+section {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.elementsEffectRight {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.elementsEffectLeft {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.elementsEffectRight.animate__animated {
+  opacity: 1;
+}
+
+.elementsEffectLeft.animate__animated {
+  opacity: 1;
+}
+
+.card-step.animate__animated {
+  opacity: 1;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--title);
+}
+
+/* HERO SECTION */
+#hero {
+  opacity: 1;
+  background: url("/img/hero-background.webp") no-repeat fixed center / cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  /* z-index: 0; */
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* z-index: -1; */
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  filter: drop-shadow(1px 1px 2px black);
+  color: #25aae7;
+  /* z-index: 1; */
+}
+
+#hero a {
+  /* z-index: 1; */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem;
+  border-radius: 6px;
+  font-weight: bolder;
+  color: black;
+  backdrop-filter: blur(5px) saturate(180%);
+  -webkit-backdrop-filter: blur(5px) saturate(180%);
+  background-color: rgb(37, 170, 231, 0.3);
+  transition: 0.5s all;
+  /* z-index: 2; */
+}
+
+#hero a:hover {
+  transform: scale(1.2);
+}
+/* HERO SECTION */
+
+/* WHO WE ARE SECTION */
+#who-we-are {
+  width: 100%;
+}
+
+#who-we-are > p {
+  color: white;
+  padding: 10px;
+  font-weight: 300;
+  font-family: var(--inter);
+}
+.img-whoweare {
+  width: 100%;
+  padding-bottom: -10rem;
+}
+/* WHO WE ARE SECTION */
+
+/* PROCESO SECTION */
+#process {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: rgb(17, 17, 17);
+  background: url("/img/process-background.webp") no-repeat fixed center / cover;
+  /* z-index: -1; */
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+#process::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  /* z-index: 0; */
+}
+
+#content-process {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  /* z-index: 1; */
+  width: 100%;
+}
+
+#process h2 {
+  color: #25aae7;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bolder;
+  padding: 1rem;
+  filter: drop-shadow(1px 1px 2px black);
+}
+
+.card-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  margin-top: 10px;
+  padding: 1rem;
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  border: 1px solid #25aae7;
+  box-shadow: 1px 1px 10px black;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card-step:hover {
+  box-shadow: 1px 1px 5px black;
+  background-color: #25aae7;
+}
+
+.card-step h3 {
+  font-family: var(--inter);
+  height: 20%;
+  text-align: center;
+  color: black;
+  filter: drop-shadow(1px 1px 3px grey);
+}
+
+.card-step p {
+  text-align: center;
+  color: black;
+}
+/* PROCESO SECTION */
+/* FAQS SECTION */
+.faq {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.faq-card {
+  height: fit-content;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: white;
+}
+
+.faq-card h4 {
+  color: #25aae7;
+  filter: drop-shadow(1px 1px 1px rgb(55, 55, 55));
+  text-align: left;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.faq-card p {
+  font-size: 1.2rem;
+}
+/* FAQS SECTION */
+
+/* CONTACT SECTION */
+#contact {
+  position: relative;
+  height: content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: url("/img/contact-background.webp") no-repeat fixed center / cover;
+}
+
+#contact::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* z-index: 0; */
+}
+
+#contact h3 {
+  color: white;
+  font-family: var(--title);
+  font-size: 3rem;
+  z-index: 1;
+}
+
+#contact a {
+  z-index: 1;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: white;
+  padding: 15px;
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  filter: drop-shadow(1px 1px 5px black);
+  border-radius: 3px;
+  transition: 0.4s all;
+}
+
+#contact a h4 {
+  color: white;
+  font-weight: bolder;
+}
+
+.box-contact:hover {
+  background-color: #25aae7;
+
+  box-shadow: 1px 1px 5px black;
+}
+
+/* CONTACT SECTION */
