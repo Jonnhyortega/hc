@@ -29,17 +29,27 @@ footer a {
   z-index: 1;
 }
 
-/* .autor-content {
-  position: absolute;
-  bottom: 10px;
-  z-index: 1;
-} */
+.autor-content {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 100%;
+ gap: 10px;
+}
 .autor-content span {
   color: white;
 }
-.autor-content a {
+.autor-content > a {
   color: white;
   text-decoration: underline;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.autor-content > a > img {
+  border-radius: 50%;
 }
 
 .redes-links {

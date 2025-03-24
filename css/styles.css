@@ -89,7 +89,6 @@ h3 {
 }
 
 #hero a {
-  /* z-index: 1; */
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -102,11 +101,12 @@ h3 {
   -webkit-backdrop-filter: blur(5px) saturate(180%);
   background-color: rgb(37, 170, 231, 0.3);
   transition: 0.5s all;
-  /* z-index: 2; */
+  position: relative;
 }
 
 #hero a:hover {
   transform: scale(1.2);
+  background-color: rgb(37, 170, 231);
 }
 /* HERO SECTION */
 
@@ -120,6 +120,7 @@ h3 {
   padding: 10px;
   font-weight: 300;
   font-family: var(--inter);
+  font-size: 1.2rem;
 }
 .img-whoweare {
   width: 100%;
@@ -263,10 +264,12 @@ h3 {
 }
 
 #contact h3 {
-  color: white;
+  color: #25aae7;
+  filter: drop-shadow(1px 1px 1px rgb(55, 55, 55));
   font-family: var(--title);
   font-size: 3rem;
   z-index: 1;
+  font-weight: bolder;
 }
 
 #contact a {
@@ -283,6 +286,7 @@ h3 {
   filter: drop-shadow(1px 1px 5px black);
   border-radius: 3px;
   transition: 0.4s all;
+  font-weight: bolder;
 }
 
 #contact a h4 {
@@ -293,6 +297,7 @@ h3 {
 .box-contact:hover {
   background-color: #25aae7;
   box-shadow: 1px 1px 5px black;
+  filter: drop-shadow(1px 1px 5px black);
 }
 
 /* CONTACT SECTION */
