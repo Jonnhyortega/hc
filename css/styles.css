@@ -76,8 +76,14 @@ h3 {
   -ms-grid-row-gap: 1rem; /* IE11 */
   -ms-grid-column-gap: 1rem; /* IE11 */
   position: relative;
-}
 
+  -webkit-background-size: cover !important; /* Forzar tamaño */
+  background-size: cover !important;
+  -webkit-background-attachment: fixed !important;
+  background-attachment: fixed !important;
+  -webkit-transform: translateZ(0); /* Mejorar renderizado */
+  transform: translateZ(0);
+}
 
 #hero::before {
   content: "";
@@ -140,15 +146,28 @@ h3 {
 
 /* PROCESO SECTION */
 #process {
+  display: -webkit-flex; /* Safari < 9 */
+  display: -ms-flexbox; /* IE11 */
   display: flex;
+  -webkit-flex-direction: column; /* Safari < 9 */
+  -ms-flex-direction: column; /* IE11 */
   flex-direction: column;
+  -webkit-align-items: center; /* Safari < 9 */
+  -ms-flex-align: center; /* IE11 */
   align-items: center;
   gap: 1.5rem;
   background-color: rgb(17, 17, 17);
   background: url("/img/process-background.webp") no-repeat fixed center / cover;
-  /* z-index: -1; */
   padding: 2rem 1rem;
   position: relative;
+
+  /* 🔧 Ajustes para Safari/iOS */
+  -webkit-background-size: cover !important;
+  background-size: cover !important;
+  -webkit-background-attachment: fixed !important;
+  background-attachment: fixed !important;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 #process::after {
@@ -253,18 +272,22 @@ h3 {
 /* CONTACT SECTION */
 #contact {
   position: relative;
-  height: content;
+  height: fit-content; /* Corrección: "content" → "fit-content" */
+  display: -webkit-flex; /* Safari < 9 */
+  display: -ms-flexbox; /* IE11 */
   display: flex;
+  -webkit-flex-direction: column; /* Safari < 9 */
+  -ms-flex-direction: column; /* IE11 */
   flex-direction: column;
+  -webkit-align-items: center; /* Safari < 9 */
+  -ms-flex-align: center; /* IE11 */
   align-items: center;
+  -webkit-justify-content: center; /* Safari < 9 */
+  -ms-flex-pack: center; /* IE11 */
   justify-content: center;
   gap: 20px;
-  /* background: url("/img/contact-background.webp")  no-repeat  fixed center / 
-    contain ; */
-  background: url("/img/contact-background.webp");
-  background-attachment: fixed; 
-  background-size:cover; 
-  background-position: center;
+  background: url("/img/contact-background.webp") no-repeat fixed center / cover;
+  padding: 2rem 1rem; /* Añadido para consistencia */
 }
 
 #contact::after {
