@@ -60,14 +60,24 @@ h3 {
 #hero {
   opacity: 1;
   background: url("/img/hero-background.webp") no-repeat fixed center / cover;
+  display: -webkit-flex; /* Safari < 9 */
+  display: -ms-flexbox; /* IE11 */
   display: flex;
+  -webkit-flex-direction: column; /* Safari < 9 */
+  -ms-flex-direction: column; /* IE11 */
   flex-direction: column;
+  -webkit-align-items: center; /* Safari < 9 */
+  -ms-flex-align: center; /* IE11 */
   align-items: center;
+  -webkit-justify-content: center; /* Safari < 9 */
+  -ms-flex-pack: center; /* IE11 */
   justify-content: center;
   gap: 1rem;
+  -ms-grid-row-gap: 1rem; /* IE11 */
+  -ms-grid-column-gap: 1rem; /* IE11 */
   position: relative;
-  /* z-index: 0; */
 }
+
 
 #hero::before {
   content: "";
