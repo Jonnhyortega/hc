@@ -1,3 +1,5 @@
+import { chatBotFunctions } from "./chatbot.js";
+
 // FUNCTIONS MENU MOBILE
 const btnMenuMobile = document.getElementById("btn-menu-mobile");
 const menuMobile = document.getElementById("nav-mobile");
@@ -85,6 +87,7 @@ const showProcess = () => {
     contentProcess.innerHTML += renderTemplateProcess(content);
   });
 };
+
 // INTERSECTION OBSERVER
 const handleEffects = () => {
   const observerLeftElements = new IntersectionObserver(
@@ -154,9 +157,10 @@ const handleEffects = () => {
 };
 
 function init() {
-  handleMenuMobile();
-  showProcess();
-  handleEffects(); // Llamar a la función
+  // handleMenuMobile();
+  // showProcess();
+  // handleEffects();
+  chatBotFunctions();
 }
 
 document.addEventListener("DOMContentLoaded", init);
