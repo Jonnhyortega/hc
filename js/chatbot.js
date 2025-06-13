@@ -5,7 +5,7 @@
   const sendButton = document.getElementById("send-button");
   const closeChat = document.getElementById("close-chat");
   const iconChat = document.getElementById("icon-chat");
-
+  let openMenu = false;
 
   window.addEventListener("beforeunload", function(e) {
   console.log("La página se está recargando o cerrando");
@@ -14,14 +14,12 @@
 
  
   iconChat.addEventListener("click", () => {
-    chatContainer.style.display = "flex";
-    iconChat.innerHTML
+    openMenu = !openMenu;
+    chatContainer.style.display = openMenu  ? "flex" : "none";
+    iconChat.innerHTML = openMenu ? '<img width="50" height="50" src="https://img.icons8.com/color/50/cancel--v1.png" alt="cancel--v1"/>' : '<img width="80" height="80" src="https://img.icons8.com/office/80/chat-message.png" alt="chat-message"/>';
   });
   
-  closeChat.addEventListener("click", () => {
-    chatContainer.style.display = "none";
-    iconChat.style.display = "block";
-  });
+  
 
 
   // Historial local para mantener contexto
