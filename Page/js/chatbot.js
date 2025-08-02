@@ -3,7 +3,6 @@
   const chatMessages = document.getElementById("chat-messages");
   const chatInput = document.getElementById("chat-input");
   const sendButton = document.getElementById("send-button");
-  const closeChat = document.getElementById("close-chat");
   const iconChat = document.getElementById("icon-chat");
   let openMenu = false;
 
@@ -19,8 +18,6 @@
     iconChat.innerHTML = openMenu ? '<img width="50" height="50" src="https://img.icons8.com/color/50/cancel--v1.png" alt="cancel--v1"/>' : '<img width="80" height="80" src="https://img.icons8.com/office/80/chat-message.png" alt="chat-message"/>';
   });
   
-  
-
 
   // Historial local para mantener contexto
   let history = [];
@@ -73,12 +70,13 @@
 
   // Enviar con botón o Enter
   sendButton.addEventListener("click", (e) => {
-    console.log("Click en botón enviar");
+    e.preventDefault();
     if (sendButton.disabled) return;
     sendMessage();
   });
   chatInput.addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
+        e.preventDefault();
         console.log("Click en botón enviar");
         sendMessage()};
   });

@@ -116,6 +116,7 @@ transform: scale(1.01);
 
 .box-input{
   position: relative;
+  background-color: white;
 }
 
 .box-input > button {
@@ -145,7 +146,7 @@ transform: scale(1.01);
   backdrop-filter: blur(25px) saturate(180%);
   -webkit-backdrop-filter: blur(25px) saturate(180%);
   background-color: rgba(255, 255, 255, 0);
-  color: white;
+  color: black;
 }
 
 #chat-input::placeholder {
